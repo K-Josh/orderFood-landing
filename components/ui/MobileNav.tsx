@@ -10,10 +10,9 @@ import { navLinks } from '@/constants'
 import { cn } from '@/lib/utils'
 import { Button } from './button'
 
-
 const MobileNav = () => {
   return (
- <section className='max-w-[246px]'>
+ <section className='container'>
    <Sheet>
     <SheetTrigger className='my-2'>
       <Image src='/assets/menu.svg' 
@@ -36,7 +35,7 @@ const MobileNav = () => {
           )
         })}
         <div>
-         <Button className='rounded-full text-12 text-light hover:bg-secondary hover:text-dark'>Download App</Button>
+         <Button className='btn'>Download App</Button>
         </div>
       </div>
      </SheetContent>

@@ -7,15 +7,15 @@ import { Button } from './button'
   
 const Navbar = () => {
   return (
- <section className='p-4 sticky top-0'>
-   <div className='flex items-center justify-between'>
+ <section className='sticky top-0 backdrop-blur-sm'>
+   <div className='flex md:px-[3rem] md:py-4 items-center justify-between '>
      <div>
       <Image src='/assets/lightLogo.svg' alt='logo' width={70} height={80} />  
      </div>
       <div className=' hidden md:flex items-center space-x-8'>
        {navLinks.map((nav, index) => {
            return (
-            <nav className='md:text-16 hover:text-primary hover:text-semibold cursor-pointer whitespace-nowrap' key={index}>
+            <nav className='md:text-18 hover:text-primary hover:text-semibold cursor-pointer whitespace-nowrap' key={index}>
              <div>
               <p>{nav.link}</p>
              </div>

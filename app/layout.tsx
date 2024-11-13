@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Sofia_Sans, Sofia_Sans_Semi_Condensed } from "next/font/google"
 import "./globals.css";
 
@@ -12,12 +11,6 @@ const sofiaSans = Sofia_Sans({ subsets: ['latin'],
   variable: "--font-sofiaCondensed", 
   weight: ['300', '400']
   });
-  
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Food order",
@@ -35,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${sofiaSans.variable} ${sofiaSansCondensed.variable}`}
+        className={`${sofiaSans.variable} ${sofiaSansCondensed.variable}`}
       >
         {children}
       </body>
